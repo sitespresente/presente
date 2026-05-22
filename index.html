@@ -1,283 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para a Mulher Mais Especial</title>
-    <style>
-        /* Importando fontes elegantes do Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400&display=swap');
-
-        body {
-            margin: 0;
-            padding: 0;
-            /* Fundo com um gradiente radial perolado */
-            background: radial-gradient(circle at center, #ffffff 0%, #fcf7f2 60%, #f4e8df 100%);
-            color: #4a3b32;
-            font-family: 'Playfair Display', serif;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        #canvas-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .cartao {
-            position: relative;
-            z-index: 10;
-            text-align: center;
-            /* Efeito Glassmorphism (Vidro Fosco) */
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            padding: 50px 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.3); /* Borda dourada suave */
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
-            max-width: 500px;
-            width: 90%;
-            transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            color: #b76e79; /* Ouro Rose */
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        .subtitulo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            color: #8a7364;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 40px;
-        }
-
-        .texto-poema {
-            font-size: 1.5rem;
-            line-height: 1.8;
-            color: #5c4b41;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-
-        .assinatura {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            color: #b76e79;
-            font-weight: bold;
-            margin-top: 30px;
-            letter-spacing: 2px;
-        }
-
-        button {
-            font-family: 'Montserrat', sans-serif;
-            background: transparent;
-            border: 1px solid #b76e79;
-            color: #b76e79;
-            padding: 15px 40px;
-            font-size: 13px;
-            cursor: pointer;
-            transition: all 0.5s ease;
-            border-radius: 30px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            position: relative;
-            overflow: hidden;
-        }
-
-        button:hover {
-            background: #b76e79;
-            color: #fff;
-            box-shadow: 0 10px 20px rgba(183, 110, 121, 0.3);
-            transform: translateY(-2px);
-        }
-
-        /* Ocultar a mensagem interna no início */
-        #conteudo-interno {
-            display: none;
-            opacity: 0;
-            transition: opacity 1.5s ease;
-        }
-
-        #conteudo-inicial {
-            transition: opacity 0.8s ease;
-        }
-
-    </style>
+  <meta charset="UTF-8">
+  <title>Documentário Cartoon Network</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0A0A0A;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+    header {
+      background-color: #E50914;
+      padding: 20px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .catalogo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+    .card {
+      background-color: #222;
+      margin: 10px;
+      width: 200px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+    section {
+      margin: 40px;
+    }
+    h2 {
+      color: #E50914;
+    }
+  </style>
 </head>
 <body>
+  <header>Documentário: Declínio e Reinvenção — Cartoon Network</header>
 
-    <canvas id="canvas-container"></canvas>
-
-    <div class="cartao" id="cartao-principal">
-        <div id="conteudo-inicial">
-            <h2>Para Minha Mãe</h2>
-            <div class="subtitulo">Uma homenagem do fundo do coração</div>
-            <button id="btn-abrir">Revelar Mensagem</button>
-        </div>
-
-        <div id="conteudo-interno">
-            <div class="subtitulo" style="margin-bottom: 20px;">Com todo o meu afeto</div>
-            <div class="texto-poema">
-                "Todo o amor que eu conheço,<br>
-                toda a força que eu tenho,<br>
-                nasceram do seu coração.<br>
-                Obrigado por estar comigo diariamente."
-            </div>
-            <div class="assinatura">TE AMO INFINITAMENTE ♥</div>
-        </div>
+  <section>
+    <h2>Catálogo de Tópicos</h2>
+    <div class="catalogo">
+      <div class="card">Ascensão</div>
+      <div class="card">Declínio</div>
+      <div class="card">Ruptura 2022</div>
+      <div class="card">Ações 2024</div>
+      <div class="card">Erros Estratégicos</div>
+      <div class="card">Cultura</div>
+      <div class="card">Entrevistas</div>
+      <div class="card">Conclusão</div>
     </div>
+  </section>
 
-    <script>
-        const canvas = document.getElementById('canvas-container');
-        const ctx = canvas.getContext('2d');
-        const btnAbrir = document.getElementById('btn-abrir');
-        const inicial = document.getElementById('conteudo-inicial');
-        const interno = document.getElementById('conteudo-interno');
-        const cartao = document.getElementById('cartao-principal');
+  <section>
+    <h2>Prólogo</h2>
+    <p>Era uma vez um canal que ditava a infância de uma geração. Entre 1998 e 2014, o Cartoon Network foi sinônimo de inovação animada...</p>
+  </section>
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+  <section>
+    <h2>Linha do Tempo</h2>
+    <ul>
+      <li>2016–2018: Início do declínio estrutural</li>
+      <li>2022: Fusão Warner + Discovery</li>
+      <li>2024: Fechamento do site e Boomerang</li>
+    </ul>
+  </section>
 
-        let particulas = [];
+  <section>
+    <h2>Principais Erros</h2>
+    <ol>
+      <li>Transformar marcas em catálogo</li>
+      <li>Foco financeiro de curto prazo</li>
+      <li>Destruição do ecossistema digital</li>
+      <li>Dependência de poucas franquias</li>
+      <li>Falta de estratégia infantil moderna</li>
+    </ol>
+  </section>
 
-        // Elementos flutuantes (Gardênias, Lírios e Flores de Cerejeira)
-        const FLORES = ["🌼", "🌷", "🌸"]; 
-        const CORES_CORACAO = ["#b76e79", "#d4af37", "#ffb6c1", "#e6a8d7"]; 
-
-        class ElementoFlutuante {
-            constructor() {
-                this.reiniciar(true);
-            }
-
-            reiniciar(inicioAleatorio = false) {
-                this.x = Math.random() * canvas.width;
-                this.y = inicioAleatorio ? Math.random() * canvas.height : -50;
-                
-                let tipo = Math.random();
-                if (tipo < 0.35) {
-                    this.tipo = 'flor';
-                    this.conteudo = FLORES[Math.floor(Math.random() * FLORES.length)];
-                    this.tamanho = Math.random() * 15 + 15;
-                    this.velY = Math.random() * 0.8 + 0.3;
-                } else if (tipo < 0.75) {
-                    this.tipo = 'coracao';
-                    this.conteudo = "♥";
-                    this.cor = CORES_CORACAO[Math.floor(Math.random() * CORES_CORACAO.length)];
-                    this.tamanho = Math.random() * 20 + 10;
-                    this.velY = Math.random() * 1 + 0.5;
-                } else {
-                    this.tipo = 'luz';
-                    this.tamanho = Math.random() * 3 + 1;
-                    this.velY = Math.random() * 0.5 + 0.1;
-                }
-
-                this.anguloSeno = Math.random() * Math.PI * 2;
-                this.velSeno = Math.random() * 0.02 + 0.01;
-                this.amplitudeSeno = Math.random() * 1.5 + 0.5;
-                
-                this.rotacao = Math.random() * Math.PI * 2;
-                this.velRotacao = (Math.random() - 0.5) * 0.02;
-                this.opacidade = Math.random() * 0.5 + 0.5;
-            }
-
-            atualizar(aceleracao) {
-                this.y += this.velY * aceleracao;
-                this.anguloSeno += this.velSeno;
-                this.x += Math.sin(this.anguloSeno) * this.amplitudeSeno;
-                this.rotacao += this.velRotacao;
-
-                if (this.y > canvas.height + 50) {
-                    this.reiniciar();
-                }
-            }
-
-            desenhar() {
-                ctx.save();
-                ctx.translate(this.x, this.y);
-                
-                if (this.tipo === 'luz') {
-                    ctx.globalAlpha = Math.abs(Math.sin(this.anguloSeno * 2));
-                    ctx.beginPath();
-                    ctx.arc(0, 0, this.tamanho, 0, Math.PI * 2);
-                    ctx.fillStyle = '#d4af37';
-                    ctx.shadowBlur = 10;
-                    ctx.shadowColor = '#d4af37';
-                    ctx.fill();
-                } else if (this.tipo === 'coracao') {
-                    ctx.rotate(Math.sin(this.anguloSeno) * 0.3);
-                    ctx.globalAlpha = this.opacidade;
-                    ctx.font = `${this.tamanho}px Arial`;
-                    ctx.fillStyle = this.cor;
-                    ctx.fillText(this.conteudo, 0, 0);
-                } else {
-                    ctx.rotate(this.rotacao);
-                    ctx.globalAlpha = this.opacidade;
-                    ctx.font = `${this.tamanho}px serif`;
-                    ctx.fillText(this.conteudo, 0, 0);
-                }
-                
-                ctx.restore();
-            }
-        }
-
-        for (let i = 0; i < 100; i++) {
-            particulas.push(new ElementoFlutuante());
-        }
-
-        let velocidadeVento = 1;
-
-        function abrirCartao() {
-            inicial.style.opacity = '0';
-            velocidadeVento = 3; 
-
-            setTimeout(() => {
-                inicial.style.display = 'none';
-                interno.style.display = 'block';
-                
-                cartao.style.padding = '60px 40px';
-                
-                setTimeout(() => { velocidadeVento = 1; }, 800);
-
-                setTimeout(() => {
-                    interno.style.opacity = '1';
-                }, 100);
-            }, 800);
-        }
-
-        function animar() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            particulas.forEach(p => {
-                p.atualizar(velocidadeVento);
-                p.desenhar();
-            });
-
-            requestAnimationFrame(animar);
-        }
-
-        animar();
-        btnAbrir.addEventListener('click', abrirCartao);
-
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-    </script>
+  <section>
+    <h2>Conclusão</h2>
+    <p>O Cartoon Network está em declínio avançado na TV, absorvido no streaming e sofrendo erosão cultural. O futuro depende de reconstrução digital, curadoria multiplataforma e preservação do legado.</p>
+  </section>
 </body>
 </html>
